@@ -1,0 +1,20 @@
+{
+  "name": "soulweather",
+  "version": "1.0.0",
+  "description": "SoulWeather Journal App",
+  "main": "server.js",
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamara-moses/SoulWeather.git"
+  },
+  "author": "Moses Kamara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamara-moses/SoulWeather/issues"
+  },
+  "homepage": "https://github.com/kamara-moses/SoulWeather#readme"
+}
