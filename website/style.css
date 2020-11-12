@@ -1,89 +1,246 @@
+/* 
+
+
 body{
-    background: #fffff8;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.3), rgba(0,0,0, 0.6) ), url(./images/showers.jpg);
+    background-size: cover;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+.app{
+    max-width: 80%;
+    height: fit-content;
+    margin: 50px auto;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.holder{
 
-}
-
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
+/**************APP HEADLINE*************/
 .title{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(252, 252, 252);
+    margin-bottom: 20px;
+    font-weight: 200;
+}
 
+/**************APP INPUT*************/
+.app__input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.app__input >*{
+    margin: 5px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.app__input--zip{
+    width: 8%;
+    padding: 2px;
+}
+.app__input--feelings{
+    width: 30%;
+}
+.app__input--btn{
+   display: inline-block;
+   height: 33px;
+   background-color: #f08a5d;
+   color: #fff;
+   transition: background-color 0.2s;
+}
+
+.app__input--btn:hover{
+   background-color: #f55d1c;
+}
+
+/**************APP ENTRY*************/
+.app__entry{
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*APP Entry Titles*/
+h2{
+    background-color:#f08a5d;
+    color: #fff;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2rem;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.entry__history--title{
+    border-top-left-radius: 5px;
+}
+
+.holder--title{
+    border-top-right-radius: 5px;
+    border-left: 1px solid #fff;
+}
+
+/*APP Entry History*/
+.app__entry__history{
+    width: 30%;
+    border-right: 1px solid #fff;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.entry__history--item{
+    list-style: none;
+    border-bottom: 2px solid #fff;
+    padding: 10px 0;
+    background-color: #fce4d9;
+    transition: background-color 0.2s;
+}
+
+.entry__history--item:hover{
+    background-color: #f8c2aa;
+}
+
+.item--details,
+.item--title{
+    display: flex;
+    flex-direction: row;
+}
+
+.active{
+    background-color: #f8c2aa;
+}
+
+.item--title{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.item--title h3{
+    font-size: 0.9rem;
+    font-weight: 600; 
+    margin-top: 0;
+}
+
+.item--title p{
+    font-size: 0.6rem;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.item-img{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.item--content--summary{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.7rem;
+}
+
+.item-max-temp,
+.item-min-temp,
+.item-cloudiness{
+    padding: 4px;
+    margin: 2px;
+    border-radius: 6px;
+}  
+
+.item-max-temp{
+    background-color: #ff2f51;
+}
+
+.item-min-temp{
+    background-color: #1469e5;
+    color: #fff;
+}
+
+.item-cloudiness{
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.item-windspeed,
+.item-cloudPer{
+    font-size: 0.8rem;
+}
+
+/*App Entry Holder*/
+.app__entry__holder{
+    width: 70%;
+}
+
+.holder--body{
+    padding: 5%;
+    display: none;
+}
+
+.holder--place{
+    font-size: 2rem;
+    color: #f08a5d;
+}
+
+.holder__head{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.holder--img{
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.holder--temp{
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.holder__details{
+    font-weight: 600;
+}
+
+.holder__details:before{
+    display: block;
+    content:"";
+    height: 2px;
+    width: 200px;
+    background-color: rgba(240, 138, 93, 0.6);
+    margin-bottom: 10px;
+}
+
+.holder__details span{
+    font-weight: 300;
+}
+
+.icon-small{
+    color: #f08a5d;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-}
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
-}
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
+
+
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -93,7 +250,8 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: #555; 
+    font-size: 1rem;
     font-family: 'Oswald', sans-serif;
 
 } 
@@ -109,3 +267,200 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 
 } 
+
+/*Media Query*/
+@media (max-width: 1024px){
+    .app{
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px){
+    .app__entry__history{
+        width: 40%;
+    }
+
+    .app__entry__holder{
+        width: 60%;
+    }
+}
+
+@media (max-width: 584px){
+    .app{
+        width: 100%;
+        padding: 2px;
+    }
+    .app__input >*{
+        margin-left: 0;
+    }
+    .app__entry{
+        flex-direction: column-reverse;
+    }
+
+    .app__entry__history,
+    .app__entry__holder{
+        width: 100%;
+        border: none;
+    }
+
+    .holder--title{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-left: none;
+    }
+
+    .entry__history--title{
+        border-top-left-radius: 0;
+    }
+
+    .app__input{
+        flex-direction: column;
+    }
+
+    .app__input--zip,
+    .app__input--feelings{
+        width: 100%;
+    }
+
+    .app__input--btn{
+        width: 101%;
+    }
+
+    .holder--place{
+        font-size: 1.5rem;
+    }
+
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    background-color: #e6f0ff;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+.headline {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+
+.zip,
+.feel {
+    margin-bottom: 40px;
+}
+
+#zip {
+    margin-right: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+label,
+input,
+textarea {
+    vertical-align: middle;
+}
+
+input,
+.myInput {
+    padding: 10px;
+    font-size: large;
+}
+
+.units {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.unit-title {
+    margin-right: 10px;
+}
+
+.radio-label {
+    font-size: large;
+}
+
+#metric,
+#imperial {
+    margin-left: -5px;
+}
+
+#metric {
+    margin-right: 10px;
+}
+
+button {
+    font-size: large;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #002966;
+    color: whitesmoke;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: x-large;
+    text-align: center;
+}
+
+#entryHolder {
+    font-size: large;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.icon {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#date,
+#temp {
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 40px;
+}
