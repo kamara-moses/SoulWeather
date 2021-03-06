@@ -20,12 +20,12 @@ goButton.addEventListener('click', clickRespond);
 // Grabs the user's input, then forms URL, calls API, POSTS and updates UI
 function clickRespond() {
 
-    // Grab user's input
+   // Grab user's input
     const zipInput = document.getElementById('zip');
     const cityInput = document.getElementById('city');
     const unitsInput = document.querySelector('input[name="units"]:checked')
     const feelingsInput = document.getElementById('feelings');
-    let units;
+    let units; 
     let degreeSystem;
     if (unitsInput) {
         units = unitsInput.value;
@@ -56,6 +56,7 @@ function clickRespond() {
 
         // Prepares data for POST, calls the POST
         .then(function (weatherData) {
+            console.log(weatherData)
             const errorMessage = document.getElementById('error');
             if (weatherData.cod == "200") {
                 errorMessage.classList.add('hide');
