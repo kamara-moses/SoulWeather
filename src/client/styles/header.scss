@@ -1,0 +1,10 @@
+.headline {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    background: white;
+    color: hsl(0, 80%, 80%);
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    width: 100%;
+}

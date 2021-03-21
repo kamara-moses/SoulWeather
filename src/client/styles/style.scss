@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,13 +16,7 @@ body {
     min-height: 100vh
 }
 
-.headline {
-    text-align: center;
-    font-size: 2rem;
-    color: rgb(252, 252, 252);
-    margin-bottom: 20px;
-    font-weight: 200;
-}
+
 
 .zip,
 .feel {
