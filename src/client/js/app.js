@@ -1,4 +1,5 @@
 /* Global Variables */
+import { config } from "./config"
 
 // The URL root if user searches by zip code
 const API_ROOT_ZIP = 'http://api.openweathermap.org/data/2.5/weather?zip=';
@@ -121,3 +122,5 @@ function dateTime() {
     const date = `${d.getMonth() + 1}.${d.getDate()}.${d.getFullYear()} at time ${d.getHours()}:${minutes}`;
     return date;
 }
+
+export { clickRespond }
