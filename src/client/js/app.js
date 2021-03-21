@@ -123,4 +123,4 @@ function dateTime() {
     return date;
 }
 
-export { clickRespond }
+export { clickRespond, getWeather, postJournal, updateUI, dateTime }

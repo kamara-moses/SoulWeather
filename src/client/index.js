@@ -1,5 +1,6 @@
-import { clickRespond } from "./js/app";
+import { clickRespond, getWeather, postJournal, updateUI, dateTime } from "./js/app";
+import { config } from "./js/config"
 
 import "./styles/style.scss"
 
-export {clickRespond }
+export { clickRespond, getWeather, postJournal, updateUI, dateTime, config }
