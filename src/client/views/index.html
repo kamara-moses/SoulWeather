@@ -15,44 +15,57 @@
         <h1>Soul Weather Journal</h1>
       </div>
       <main>
-        <section class="search">
-          <div class="input-container">
-            <h2 id="error" class="hide">Bad data entered. Please try again.</h2>
-          <div class="holder zip city">
-            <label for="zip">Zip Code</label>
-            <input
-              type="text"
-              id="zip"
-              maxlength="5"
-              size="13"
-              placeholder="enter zip code"
-            />
-            <label for="city"><b>or</b> City</label>
-            <input type="text" id="city" size="13" placeholder="enter city" />
+        <div class="row">
+          <div class="column">
+            <section class="search">
+              <div class="search-form">
+                <h2 id="error" class="hide">
+                  Bad data entered. Please try again.
+                </h2>
+                <div class="row input-container">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="styled-input">
+                      <label for="zip">Zip Code</label>
+                      <input type="text" id="zip" placeholder="enter zip code" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="styled-input" style="float:right;">
+                      <label for="city"><b>or</b> City</label>
+                      <input type="text" id="city" placeholder="enter city" />
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-xs-12">
+                    <div class="styled-input wide">
+                      <label for="feelings">How are you feeling today?</label>
+                      <textarea
+                        class="myInput"
+                        id="feelings"
+                        placeholder="Enter your feelings here"
+                        rows="3"
+                        cols="37"
+                      ></textarea>
+                    </div>
+                  </div>
+                <button id="generate" type="submit">Generate</button>
+              </div>
+            </section>
           </div>
-          <div class="holder feel">
-            <label for="feelings">How are you feeling today?</label>
-            <textarea
-              class="myInput"
-              id="feelings"
-              placeholder="Enter your feelings here"
-              rows="3"
-              cols="37"
-            ></textarea>
+          <div class="column" style="background-color:#bbb;">
+            <div id="journal" class="holder entry hide">
+              <div class="title">Most Recent Entry</div>
+              <div id="entryHolder">
+                <div id="icon"></div>
+                <div id="date"></div>
+                <div id="temp"></div>
+                <div id="content"></div>
+              </div>
+            </div>
           </div>
-          <button id="generate" type="submit">Generate</button>
-          </div>
-        </section>
-      </main>
-      <div id="journal" class="holder entry hide">
-        <div class="title">Most Recent Entry</div>
-        <div id="entryHolder">
-          <div id="icon"></div>
-          <div id="date"></div>
-          <div id="temp"></div>
-          <div id="content"></div>
         </div>
-      </div>
+      </main>
+
       <footer>
         <h2>
           &copy; 2020 Moses Kamara
